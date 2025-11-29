@@ -221,60 +221,60 @@
         }
         
         .code-section {
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 20px 15px;
-    background: transparent; /* Remove gradient background */
-    border-radius: 12px;
-    color: #333; /* Change text color from white to dark */
-}
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 20px 15px;
+            background: transparent;
+            border-radius: 12px;
+            color: #333;
+        }
 
-.code {
-    font-size: clamp(28px, 8vw, 42px);
-    font-weight: 800;
-    letter-spacing: 4px;
-    color: #333; /* Change from white to dark */
-    margin-bottom: 12px;
-    font-family: monospace;
-    min-height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-shadow: none; /* Remove text shadow */
-}
+        .code {
+            font-size: clamp(28px, 8vw, 42px);
+            font-weight: 800;
+            letter-spacing: 4px;
+            color: #333;
+            margin-bottom: 12px;
+            font-family: monospace;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-shadow: none;
+        }
 
-.code-info {
-    color: #666; /* Change from rgba white to dark gray */
-    font-size: clamp(13px, 3.5vw, 15px);
-    margin-bottom: 8px;
-}
+        .code-info {
+            color: #666;
+            font-size: clamp(13px, 3.5vw, 15px);
+            margin-bottom: 8px;
+        }
 
-.sync-status {
-    font-size: clamp(11px, 3vw, 12px);
-    color: #666; /* Change from rgba white to dark gray */
-    margin-top: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-}
+        .sync-status {
+            font-size: clamp(11px, 3vw, 12px);
+            color: #666;
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
 
-.proxy-status {
-    margin-top: 8px;
-    font-size: clamp(10px, 2.8vw, 11px);
-    color: #4CAF50; /* Change text color */
-    background: #f0f9f0; /* Change background to solid color */
-    padding: 6px 12px;
-    border-radius: 20px;
-    display: inline-block;
-    backdrop-filter: none; /* Remove blur effect */
-}
+        .proxy-status {
+            margin-top: 8px;
+            font-size: clamp(10px, 2.8vw, 11px);
+            color: #4CAF50;
+            background: #f0f9f0;
+            padding: 6px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            backdrop-filter: none;
+        }
         
         .error {
             color: #ff6b6b;
             font-size: clamp(12px, 3.2vw, 14px);
             margin-top: 8px;
-            background: rgba(255,255,255,0.1);
+            background: #ffe6e6;
             padding: 8px 12px;
             border-radius: 6px;
         }
@@ -313,7 +313,10 @@
         .connected {
             background-color: #51cf66;
             animation: pulse 2s infinite;
-            box-shadow: 0 0 10px rgba(81, 207, 102, 0.5);
+        }
+        
+        .disconnected {
+            background-color: #ff6b6b;
         }
         
         .pricing {
@@ -393,138 +396,46 @@
             font-weight: 500;
         }
         
-.support-contact {
-    text-align: center;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #dee2e6;
-    margin-top: 10px;
-}
+        .support-contact {
+            text-align: center;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #dee2e6;
+            margin-top: 10px;
+        }
 
-.support-contact div {
-    color: #495057;
-    margin-bottom: 8px;
-    font-size: 15px;
-    font-weight: 600;
-}
+        .support-contact div {
+            color: #495057;
+            margin-bottom: 8px;
+            font-size: 15px;
+            font-weight: 600;
+        }
 
-.support-contact a {
-    color: #4a6cf7;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 15px;
-    padding: 8px 16px;
-    background: white;
-    border-radius: 8px;
-    border: 1px solid #4a6cf7;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
+        .support-contact a {
+            color: #4a6cf7;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            padding: 8px 16px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #4a6cf7;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
 
-.support-contact a:hover {
-    background: #4a6cf7;
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(74, 108, 247, 0.3);
-}
-        
-        /* Mobile-specific optimizations */
-        @media (max-width: 480px) {
-            .container {
-                padding: 20px 15px;
-                border-radius: 10px;
-            }
-            
-            .status {
-                gap: 8px;
-            }
-            
-            .status-item {
-                padding: 12px 6px;
-            }
-            
-            .status-value {
-                font-size: clamp(22px, 7vw, 28px);
-            }
-            
-            .code {
-                letter-spacing: 3px;
-                min-height: 45px;
-            }
-            
-            .price-plans {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-            
-            .credential-value {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 12px;
-            }
-            
-            .copy-btn {
-                align-self: center;
-                min-width: 80px;
-            }
+        .support-contact a:hover {
+            background: #4a6cf7;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(74, 108, 247, 0.3);
         }
         
-        @media (max-width: 360px) {
-            .container {
-                padding: 15px 12px;
-            }
-            
-            .purchase-details {
-                flex-direction: column;
-                gap: 5px;
-            }
-            
-            .status {
-                flex-direction: column;
-                gap: 8px;
-            }
-            
-            .status-item {
-                padding: 15px 10px;
-            }
-        }
-        
-        @media (min-width: 768px) {
-            .container {
-                max-width: 550px;
-                padding: 30px 25px;
-            }
-            
-            .credential-item {
-                flex-direction: row;
-                align-items: center;
-            }
-            
-            .credential-label {
-                width: 100px;
-                flex-shrink: 0;
-            }
-            
-            .credential-value {
-                flex-direction: row;
-            }
-        }
-        
-        /* Animation improvements */
         @keyframes pulse {
-            0% { 
-                opacity: 1;
-                transform: scale(1);
-            }
-            50% { 
-                opacity: 0.7;
-                transform: scale(1.05);
-            }
-            100% { 
-                opacity: 1;
-                transform: scale(1);
-            }
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
         }
         
         .fade-in {
@@ -536,52 +447,24 @@
             to { opacity: 1; transform: translateY(0); }
         }
         
-        /* Touch improvements for mobile */
-        @media (hover: none) {
-            .copy-btn:hover,
-            .price-plan:hover,
-            .retry-btn:hover {
-                transform: none;
-            }
-            
-            .copy-btn:active,
-            .price-plan:active,
-            .retry-btn:active {
-                transform: scale(0.98);
-            }
-        }
-        
-        /* High contrast mode support */
-        @media (prefers-contrast: high) {
-            .code-section {
-                background: #2d3748;
-            }
-            
-            .status-item {
-                border-color: #4a5568;
-            }
-        }
-        
-        /* Reduced motion support */
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
+        @media (max-width: 480px) {
+            .container { padding: 20px 15px; }
+            .status { gap: 8px; }
+            .status-item { padding: 12px 6px; }
+            .price-plans { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
     <div class="container fade-in">
         <div class="header">
-            <h1>Your Subscription (Plus) • ChatGpt-AI Activation (Douae Sabgui)</h1>
+            <h1>Your Subscription (Plus) • ChatGpt-AI Activation</h1>
             <p>Activation successful! Use the credentials below on the official CG-AI website and app.</p>
         </div>
         
         <div class="notice">
             <h3>Important Notice:</h3>
-            <p>Do not invite any new team members and do not share this access link with other people. Doing so will result in immediate deactivation of your subscription and a permanent ban from our platform.</p>
+            <p>Do not invite any new team members and do not share this access link with other people.</p>
             <p>We only sell on oxsam.com. We have no link with any third-party sellers. Beware of fraud.</p>
         </div>
         
@@ -640,10 +523,10 @@
                 <span id="code-countdown">Updating code...</span>
             </div>
             <div class="sync-status" id="sync-status">
-                <span class="connection-indicator connected"></span>
-                <span id="status-text">Connected to service</span>
+                <span class="connection-indicator connected" id="connection-indicator"></span>
+                <span id="status-text">Connecting to service...</span>
             </div>
-            <div class="proxy-status" id="proxy-status">Secure Connection • Active</div>
+            <div class="proxy-status" id="proxy-status">Initializing connection...</div>
             <div class="error" id="code-error" style="display: none;"></div>
             <div class="success" id="code-success" style="display: none;"></div>
             <button class="retry-btn" id="retry-btn" style="display: none;" onclick="manualRetry()">Retry Connection</button>
@@ -676,324 +559,259 @@
         </div>
         
         <div class="help-link">
-    <div class="support-contact">
-        <div>If you are experiencing any issues or would like to make a purchase, please contact :</div>
-        <a href="mailto:contactoxaam@gmail.com">contactoxaam@gmail.com</a>
+            <div class="support-contact">
+                <div>If you are experiencing any issues or would like to make a purchase, please contact:</div>
+                <a href="mailto:contactoxaam@gmail.com">contactoxaam@gmail.com</a>
+            </div>
+        </div>
     </div>
-</div>
 
     <script>
-        // =============================================
-        // UPDATED PROXY CONFIGURATION - FIXED CORS ISSUES
-        // =============================================
-        
-        // Updated proxy list with working CORS proxies
-        const PROXY_LIST = [
-            'https://api.codetabs.com/v1/proxy?quest=',
-            'https://corsproxy.io/?',
-            'https://api.allorigins.win/raw?url=',
-            'https://cors-anywhere.herokuapp.com/',
-            'https://thingproxy.freeboard.io/fetch/'
-        ];
-
-        // Target URL (simplified for better debugging)
+        // Configuration
         const TARGET_URL = 'https://www.oxaam.com/serviceaccess.php?activation_key=HY5NJTB9AGFLGS9';
         
-        // Set the expiration date (3 months from purchase)
-        const purchaseDate = new Date('2025-11-21T13:17:00');
-        const expiryDate = new Date(purchaseDate);
-        expiryDate.setMonth(expiryDate.getMonth() + 3);
-        
-        // Application state variables
+        // Try multiple endpoints in order
+        const ENDPOINTS = [
+            '/api/proxy',  // Local Vercel function
+            'https://your-vercel-app.vercel.app/api/proxy', // Your deployed function
+            `https://cors-proxy.byteoftech.workers.dev/?url=${encodeURIComponent(TARGET_URL)}`,
+            `https://api.allorigins.win/raw?url=${encodeURIComponent(TARGET_URL)}`
+        ];
+
+        // Application state
         let currentCode = null;
         let countdownValue = 30;
         let isFetching = false;
-        let currentProxyIndex = 0;
+        let currentEndpointIndex = 0;
         let consecutiveFailures = 0;
 
-        // Function to get current proxy
-        function getCurrentProxy() {
-            return PROXY_LIST[currentProxyIndex];
+        function getCurrentEndpoint() {
+            return ENDPOINTS[currentEndpointIndex];
         }
 
-        // Function to rotate to next proxy
-        function rotateProxy() {
-            currentProxyIndex = (currentProxyIndex + 1) % PROXY_LIST.length;
-            console.log('Rotating to proxy:', getCurrentProxy());
-            return getCurrentProxy();
+        function rotateEndpoint() {
+            currentEndpointIndex = (currentEndpointIndex + 1) % ENDPOINTS.length;
+            console.log('Rotating to endpoint:', getCurrentEndpoint());
+            updateProxyStatus();
+            return getCurrentEndpoint();
         }
 
-        // Enhanced fetch function with better error handling
-        async function fetchWithTimeout(resource, options = {}) {
-            const { timeout = 10000 } = options;
+        function updateProxyStatus() {
+            const statusElement = document.getElementById('proxy-status');
+            const endpoint = getCurrentEndpoint();
             
-            const controller = new AbortController();
-            const id = setTimeout(() => controller.abort(), timeout);
-            
-            try {
-                const response = await fetch(resource, {
-                    ...options,
-                    signal: controller.signal
-                });
-                clearTimeout(id);
-                return response;
-            } catch (error) {
-                clearTimeout(id);
-                throw error;
+            if (endpoint.includes('/api/proxy')) {
+                statusElement.textContent = 'Using local proxy • Secure';
+            } else if (endpoint.includes('workers.dev')) {
+                statusElement.textContent = 'Using Cloudflare proxy • Secure';
+            } else if (endpoint.includes('allorigins.win')) {
+                statusElement.textContent = 'Using backup proxy • Secure';
+            } else {
+                statusElement.textContent = 'Using proxy service • Secure';
             }
         }
 
-        // Main function to fetch real code
         async function fetchRealCode() {
             if (isFetching) return null;
             isFetching = true;
 
-            const proxy = getCurrentProxy();
-            const fullUrl = proxy + encodeURIComponent(TARGET_URL);
+            const endpoint = getCurrentEndpoint();
+            let fetchUrl = endpoint;
+
+            // For CORS proxies that need URL as parameter
+            if (endpoint.includes('?url=') || endpoint.includes('/raw?url=')) {
+                // URL is already included in the endpoint
+            } else if (!endpoint.includes('/api/proxy')) {
+                // For other proxies that need the URL appended
+                fetchUrl = endpoint + encodeURIComponent(TARGET_URL);
+            }
 
             try {
-                // Update UI status
+                // Update UI
                 document.getElementById('retry-btn').style.display = 'none';
+                document.getElementById('code-error').style.display = 'none';
                 document.getElementById('status-text').textContent = 'Syncing with service...';
-                document.getElementById('proxy-status').textContent = `Using proxy ${currentProxyIndex + 1}/${PROXY_LIST.length} • Syncing...`;
+                document.getElementById('connection-indicator').className = 'connection-indicator connected';
                 
-                console.log('Fetching code from:', fullUrl);
+                console.log('🔍 Fetching from:', fetchUrl);
                 
-                // Make the fetch request with timeout
-                const response = await fetchWithTimeout(fullUrl, {
+                const response = await fetch(fetchUrl, {
                     method: 'GET',
                     headers: {
-                        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-                        'Accept-Language': 'en-US,en;q=0.5',
-                        'Cache-Control': 'no-cache',
-                        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+                        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                        'Cache-Control': 'no-cache'
                     },
-                    mode: 'cors',
-                    cache: 'no-cache',
-                    credentials: 'omit',
-                    timeout: 15000
+                    signal: AbortSignal.timeout(15000)
                 });
-                
+
                 if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
+                    throw new Error(`HTTP ${response.status}`);
                 }
-                
+
                 const html = await response.text();
                 
-                if (html.length < 100) {
-                    throw new Error('Response too short - likely blocked');
+                if (!html || html.length < 50) {
+                    throw new Error('Empty or invalid response');
                 }
 
-                // Parse HTML to extract code using multiple methods
-                const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = html;
+                // Parse the code from HTML
+                const code = extractCodeFromHTML(html);
                 
-                // Method 1: Look for specific element IDs
-                let codeElement = tempDiv.querySelector('#totp-code');
-                
-                // Method 2: Look for specific classes
-                if (!codeElement) {
-                    codeElement = tempDiv.querySelector('.fw-bold.text-primary');
-                }
-                
-                // Method 3: Search for any 6-digit code
-                if (!codeElement) {
-                    const allElements = tempDiv.querySelectorAll('*');
-                    for (let el of allElements) {
-                        if (el.textContent && el.textContent.trim().match(/^\d{6}$/)) {
-                            codeElement = el;
-                            break;
-                        }
-                    }
+                if (!code) {
+                    throw new Error('Code not found in response');
                 }
 
-                // Method 4: Try regex search on entire HTML
-                if (!codeElement) {
-                    const codeMatch = html.match(/\b\d{6}\b/);
-                    if (codeMatch) {
-                        const code = codeMatch[0];
-                        console.log('Found code via regex:', code);
-                        
-                        // Update display with successful result
-                        document.getElementById('code-loading').style.display = 'none';
-                        document.getElementById('code-value').textContent = code;
-                        document.getElementById('code-value').style.display = 'inline';
-                        document.getElementById('code-error').style.display = 'none';
-                        
-                        // Update application state
-                        currentCode = code;
-                        countdownValue = 30;
-                        consecutiveFailures = 0;
-                        
-                        // Update UI with success status
-                        const successTimestamp = new Date().toLocaleTimeString();
-                        document.getElementById('status-text').textContent = `Last sync: ${successTimestamp}`;
-                        document.getElementById('proxy-status').textContent = `Proxy ${currentProxyIndex + 1}/${PROXY_LIST.length} • Active`;
-                        document.getElementById('proxy-status').style.background = '#f0f9f0';
-                        
-                        return { code, countdown: 30 };
-                    }
-                }
-
-                if (!codeElement) {
-                    throw new Error('Security code element not found in response');
-                }
-
-                const code = codeElement.textContent.trim();
-                console.log('Success! Code retrieved:', code);
-
-                // Update display with successful result
-                document.getElementById('code-loading').style.display = 'none';
-                document.getElementById('code-value').textContent = code;
-                document.getElementById('code-value').style.display = 'inline';
-                document.getElementById('code-error').style.display = 'none';
-                document.getElementById('code-success').style.display = 'none';
-                
-                // Update application state
-                currentCode = code;
-                countdownValue = 30;
+                console.log('✅ Code retrieved:', code);
+                updateCodeDisplaySuccess(code);
                 consecutiveFailures = 0;
                 
-                // Update UI with success status
-                const successTimestamp = new Date().toLocaleTimeString();
-                document.getElementById('status-text').textContent = `Last sync: ${successTimestamp}`;
-                document.getElementById('proxy-status').textContent = `Proxy ${currentProxyIndex + 1}/${PROXY_LIST.length} • Active`;
-                document.getElementById('proxy-status').style.background = '#f0f9f0';
-                
-                return { code, countdown: 30 };
-                
+                return code;
+
             } catch (error) {
-                console.error('Fetch failed:', error);
-                consecutiveFailures++;
-                
-                // Try next proxy if current one fails
-                if (consecutiveFailures > 0) {
-                    rotateProxy();
-                }
-                
-                // Update UI with error status
-                document.getElementById('code-error').textContent = 
-                    `Sync failed: ${error.message}. Trying next proxy...`;
-                document.getElementById('code-error').style.display = 'block';
-                document.getElementById('status-text').textContent = 'Connection issue';
-                document.getElementById('proxy-status').textContent = `Proxy ${currentProxyIndex + 1}/${PROXY_LIST.length} • Error`;
-                document.getElementById('proxy-status').style.background = '#ffe6e6';
-                document.getElementById('retry-btn').style.display = 'inline-block';
-                
-                return null;
-                
+                console.error('❌ Fetch failed:', error);
+                return handleFetchError(error);
             } finally {
                 isFetching = false;
             }
         }
 
-        // Manual retry function
+        function extractCodeFromHTML(html) {
+            // Method 1: Try to find code in specific elements
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = html;
+            
+            let codeElement = tempDiv.querySelector('#totp-code') || 
+                             tempDiv.querySelector('.fw-bold.text-primary') ||
+                             tempDiv.querySelector('.code') ||
+                             tempDiv.querySelector('.totp-code');
+            
+            if (codeElement) {
+                const code = codeElement.textContent.trim();
+                if (code.match(/^\d{6}$/)) return code;
+            }
+
+            // Method 2: Regex search for 6-digit code
+            const codeMatch = html.match(/\b\d{6}\b/);
+            if (codeMatch) {
+                return codeMatch[0];
+            }
+
+            return null;
+        }
+
+        function updateCodeDisplaySuccess(code) {
+            document.getElementById('code-loading').style.display = 'none';
+            document.getElementById('code-value').textContent = code;
+            document.getElementById('code-value').style.display = 'inline';
+            document.getElementById('status-text').textContent = `Last sync: ${new Date().toLocaleTimeString()}`;
+            document.getElementById('connection-indicator').className = 'connection-indicator connected';
+            
+            currentCode = code;
+            countdownValue = 30;
+        }
+
+        function handleFetchError(error) {
+            consecutiveFailures++;
+            
+            // Rotate endpoint after failures
+            if (consecutiveFailures >= 2) {
+                rotateEndpoint();
+            }
+
+            document.getElementById('code-error').textContent = 
+                `Sync issue: ${error.message}. Trying alternative method...`;
+            document.getElementById('code-error').style.display = 'block';
+            document.getElementById('status-text').textContent = 'Connection issue';
+            document.getElementById('connection-indicator').className = 'connection-indicator disconnected';
+            document.getElementById('retry-btn').style.display = 'inline-block';
+
+            // Show fallback message
+            if (consecutiveFailures > ENDPOINTS.length) {
+                document.getElementById('code-error').innerHTML = 
+                    'Unable to fetch real-time code. <br>Please contact support for manual code generation.';
+            }
+
+            return null;
+        }
+
         async function manualRetry() {
-            document.getElementById('retry-btn').style.display = 'none';
-            document.getElementById('code-error').style.display = 'none';
-            // Rotate to next proxy on manual retry
-            rotateProxy();
+            rotateEndpoint();
             await fetchRealCode();
         }
 
-        // Function to update the subscription countdown timer
+        // Countdown and initialization functions remain the same as before
         function updateCountdown() {
+            const expiryDate = new Date('2026-02-23T13:17:00');
             const now = new Date().getTime();
             const timeLeft = expiryDate - now;
             
             if (timeLeft <= 0) {
-                // Subscription expired
                 document.getElementById('days').textContent = '0';
                 document.getElementById('hours').textContent = '0';
                 document.getElementById('minutes').textContent = '0';
                 document.getElementById('expiry-text').textContent = 'Subscription Expired';
                 document.getElementById('expiry-text').style.color = '#f44336';
-                document.getElementById('expiry-text').style.background = '#ffebee';
                 return;
             }
             
-            // Calculate days, hours, minutes
             const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
             const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
             
-            // Update the DOM
             document.getElementById('days').textContent = days;
             document.getElementById('hours').textContent = hours;
             document.getElementById('minutes').textContent = minutes;
-            
-            // Update expiry text
-            const expiryText = document.getElementById('expiry-text');
-            const expiryDateObj = new Date(expiryDate);
-            expiryText.textContent = `Expires on ${expiryDateObj.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}, ${expiryDateObj.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}`;
-            expiryText.style.color = '#666';
-            expiryText.style.background = '#f8f9fa';
         }
-        
-        // Function to update code countdown display
-        function updateCodeDisplay() {
+
+        function updateCodeCountdown() {
             countdownValue--;
             
             if (countdownValue <= 5) {
                 document.getElementById('code-countdown').textContent = 'Updating code soon...';
-                if (countdownValue <= 3) {
+                if (countdownValue <= 0) {
+                    countdownValue = 30;
                     fetchRealCode();
                 }
-            } else if (countdownValue <= 0) {
-                countdownValue = 30;
-                document.getElementById('code-countdown').textContent = `New code in ${countdownValue}s`;
             } else {
                 document.getElementById('code-countdown').textContent = `New code in ${countdownValue}s`;
             }
         }
-        
-        // Function to copy text to clipboard
+
         function copyToClipboard(elementId) {
             const text = document.getElementById(elementId).textContent;
             navigator.clipboard.writeText(text).then(() => {
                 const button = event.target;
-                const originalText = button.textContent;
                 button.textContent = 'Copied!';
                 button.style.background = '#4CAF50';
                 setTimeout(() => {
-                    button.textContent = originalText;
+                    button.textContent = 'Copy';
                     button.style.background = '#4a6cf7';
                 }, 2000);
-            }).catch(err => {
-                console.error('Failed to copy: ', err);
             });
         }
-        
-        // Initialize the page when DOM is loaded
+
+        // Initialize
         document.addEventListener('DOMContentLoaded', async () => {
-            console.log('Initializing CG-AI Activation Page...');
-            
-            // Fetch the initial code immediately
+            console.log('🚀 Initializing CG-AI Activation Page...');
+            updateProxyStatus();
             await fetchRealCode();
-            
-            // Update countdown immediately
             updateCountdown();
             
-            // Update countdown every second
             setInterval(updateCountdown, 1000);
-            
-            // Update code display every second
-            setInterval(updateCodeDisplay, 1000);
-            
-            // Health check every 30 seconds
+            setInterval(updateCodeCountdown, 1000);
             setInterval(() => {
-                if (countdownValue > 10) { // Only sync if not about to update anyway
-                    fetchRealCode();
-                }
+                if (countdownValue > 10) fetchRealCode();
             }, 30000);
         });
 
-        // Handle page visibility changes
-        document.addEventListener('visibilitychange', function() {
-            if (!document.hidden && countdownValue > 10) {
-                fetchRealCode();
-            }
-        });
+        // Add timeout support for older browsers
+        if (!AbortSignal.timeout) {
+            AbortSignal.timeout = function(ms) {
+                const controller = new AbortController();
+                setTimeout(() => controller.abort(), ms);
+                return controller.signal;
+            };
+        }
     </script>
 </body>
 </html>
